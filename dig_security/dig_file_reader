@@ -5,8 +5,8 @@ def is_credit_card(data):
     data = data.replace('-','')
     data = data.replace(' ','')
     data = data.replace('_','')
-    regex = '[0-9]{11,16}'
-    regex1 = '[0-9]{19}'
+    regex = '[1-6][0-9]{10,15}'
+    regex1 = '[4][0-9]{18}'
     res = re.match(regex,data)
     res1 = re.match(regex1,data)
     if res or res1:
@@ -33,6 +33,6 @@ with open('financials.csv', 'r') as file:
                 count_credit += 1
             if is_medicare_id_data(data):
                 count_medicare_id += 1
-
-f = open("report.txt", "x")
-f.write("The folowing sensitive data types where found in this amount: credit card:{} \n medicare id: {}".format(count_credit, count_medicare_id))
+    print(count_credit)
+#f = open("report.txt", "x")
+#f.write("The folowing sensitive data types where found in this amount: credit card:{} \n medicare id: {}".format(count_credit, count_medicare_id))
