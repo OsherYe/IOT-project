@@ -33,6 +33,5 @@ with open('financials.csv', 'r') as file:
                 count_credit += 1
             if is_medicare_id_data(data):
                 count_medicare_id += 1
-    print(count_credit)
-#f = open("report.txt", "x")
-#f.write("The folowing sensitive data types where found in this amount: credit card:{} \n medicare id: {}".format(count_credit, count_medicare_id))
+f = open("report.txt", "x")
+f.write("The folowing sensitive data types where found in this amount: credit card:{} \n medicare id: {}".format(count_credit, count_medicare_id))
