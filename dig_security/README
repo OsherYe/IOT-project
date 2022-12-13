@@ -1,8 +1,0 @@
-What problems did you encounter when working with the data, if any?
-I did not encounter any problem working with the file.
-
-In the provided file, there is a Street Address column. How would you approach
-identifying this data?
-I would writea regex that contains letters and ONLY one number
-
-RUN the dig_file_reader.py
